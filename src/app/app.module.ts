@@ -7,6 +7,7 @@ import { HomeComponent } from '../pages/home/home.component';
 import { HistoryComponent } from '../pages/history/history.component';
 
 import { NgbModalModule, NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '../../node_modules/@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NgbModalModule, NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap'
     NgbModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
-    NgbModalModule
+    NgbModalModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

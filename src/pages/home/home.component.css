@@ -5,3 +5,36 @@
 .pointer {
     cursor:pointer;
 }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title-page {
+    margin-top:20px;
+    color: #2e2e2e;
+    font-size: 40px;
+}
+
+.title {
+    /* margin-top:10px; */
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.card-home {
+    padding:20px;
+    margin-top:20px;
+}
+
+html,body{
+    height:100%;
+   }
+
+.home {
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    background: #acacac;
+}
+
