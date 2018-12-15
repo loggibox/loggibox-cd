@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from '../pages/home/home.component';
 import { HistoryComponent } from '../pages/history/history.component';
 
+import { NgbModalModule, NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,8 +15,10 @@ import { HistoryComponent } from '../pages/history/history.component';
     HistoryComponent
   ],
   imports: [
+    NgbModule.forRoot(),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

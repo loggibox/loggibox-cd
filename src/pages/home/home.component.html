@@ -1,4 +1,81 @@
 <div class="row">
+    <div class="col-12 text-right">
+        <h1 class="display-4">
+            <a (click)="openLg(content)"><i class="fas fa-plus pointer" ></i></a>
+        </h1>
+    </div>
+</div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Cadastro de Pacote</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="row gap-top5">
+            <div class="col-4">
+                <p>
+                    Peso
+                </p>
+            </div>
+            <div class="col-8">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="row gap-top5">
+            <div class="col-4">
+                <p>
+                    Prazo
+                </p>
+            </div>
+            <div class="col-8">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="row gap-top5">
+            <div class="col-4">
+                <p>
+                    Endereco Entrega
+                </p>
+            </div>
+            <div class="col-8">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="row gap-top5">
+            <div class="col-4">
+                <p>
+                    Nome Entregador
+                </p>
+            </div>
+            <div class="col-8">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="row gap-top5">
+            <div class="col-4">
+                <p>
+                    Documento Entregador
+                </p>
+            </div>
+            <div class="col-8">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="row gap-top5">
+            <div class="col-4 offset-6">
+                <input type="button" class="btn btn-primary form-control" value="ADICIONAR" />
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    </div>
+</ng-template>
+
+<div class="row">
     <div class="col-12">
         <table class="table table-horvered table-striped">
             <thead>
