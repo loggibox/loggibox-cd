@@ -8,6 +8,7 @@ import { HistoryComponent } from '../pages/history/history.component';
 
 import { NgbModalModule, NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
+import { FormsModule } from '../../node_modules/@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HttpClientModule } from '../../node_modules/@angular/common/http';
   imports: [
     NgbModule.forRoot(),
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     NgbModalModule,
     HttpClientModule,

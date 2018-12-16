@@ -10,10 +10,18 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.gap-top5 {
+    margin-top:5px;
+}
+
 .title-page {
     margin-top:20px;
     color: #2e2e2e;
     font-size: 40px;
+}
+
+.text-left{ 
+    text-align: left;
 }
 
 .title {

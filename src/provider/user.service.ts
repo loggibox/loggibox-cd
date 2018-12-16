@@ -2,28 +2,27 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { Observable } from 'rxjs';
-import { Package } from '../model/package';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PackageService {
+export class UserService {
 
   constructor(public http: HttpClient) { }
 
   private headers = new HttpHeaders().set('Content-Type', 'application/json');
-  private fieldURL = environment.apiUrl + '/packets';
+  private fieldURL = environment.apiUrl + '/users';
 
-  getPacotes(): Observable<Object> {
+  getUsers(): Observable<Object> {
     return this.http.get<Object>(this.fieldURL)
   }
 
-  getPacotesDisponiveis(): Observable<Array<Package>> {
-    return this.http.get<Array<Package>>(this.fieldURL + "?distribution_center=true");
+  getUsersDisponiveis(): Observable<Object> {
+    return this.http.get<Object>(this.fieldURL);
   }
 
-  addPacote(pacote: Package): Observable<Object> {
-    return this.http.post<Object>(this.fieldURL, pacote, {
+  addUser(user: Object): Observable<Object> {
+    return this.http.post<Object>(this.fieldURL + "/", user, {
       headers: this.headers
     });
   }
